@@ -37,7 +37,5 @@ namespace PHP_SRePS
             _sales = sales;
             _reportDate = date;
         }
-
-
     }
 }

@@ -7,15 +7,24 @@ namespace PHP_SRePS
     public class Sale
     {
         private string _id;
+        private string _userId;
         private List<Product> _products;
         private List<int> _quantities;
         private DateTime _saleDate;
+        
 
         public string ID
         {
             get
             {
                 return _id;
+            }
+        }
+        public string UserID
+        {
+            get
+            {
+                return _userId;
             }
         }
         public List<Product> Products
@@ -82,7 +91,14 @@ namespace PHP_SRePS
         }
 
         public void AddItem(Product product, int quantity)
-        {
+        {//check for existing item
+            for (int i = 0; i < Products.Count; i++)
+            {
+                if (_products[i].ID == ID)
+                {
+                    return;
+                }
+            }
             _products.Add(product);
             _quantities.Add(quantity);
         }
