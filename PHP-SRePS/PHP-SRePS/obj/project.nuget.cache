@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TyfXVNvB+R0VU39PKbW80coQR6q11m6WJjh84uIwlhcnqU/idVHv2rvfrswOzdzP14/cl8xKfah1Qe69mGOySw==",
+  "dgSpecHash": "2ZQwyocEqY2JGtoPIXqN8APO/poWO+wogOKcMe0rJqhMPH3AQSQTZ/zl/WFMe/TakYxK/nsc4YV23iR4jvBT0A==",
   "success": true,
-  "projectFilePath": "D:\\OneDrive Swinburne\\OneDrive - Swinburne University\\2021\\Managing IT Projects\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
+  "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonathon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],

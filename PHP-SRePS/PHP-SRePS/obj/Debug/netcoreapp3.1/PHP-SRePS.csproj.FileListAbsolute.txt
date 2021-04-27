@@ -1,0 +1,4 @@
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.csprojAssemblyReference.cache
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.AssemblyInfoInputs.cache
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.AssemblyInfo.cs
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.csproj.CoreCompileInputs.cache

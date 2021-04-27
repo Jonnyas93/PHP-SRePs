@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive Swinburne\\OneDrive - Swinburne University\\2021\\Managing IT Projects\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
+      "projectUniqueName": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
       "projectName": "PHP-SRePS",
-      "projectPath": "D:\\OneDrive Swinburne\\OneDrive - Swinburne University\\2021\\Managing IT Projects\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
+      "projectPath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
       "packagesPath": "C:\\Users\\Jonathon\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive Swinburne\\OneDrive - Swinburne University\\2021\\Managing IT Projects\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS\\obj\\",
+      "outputPath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
