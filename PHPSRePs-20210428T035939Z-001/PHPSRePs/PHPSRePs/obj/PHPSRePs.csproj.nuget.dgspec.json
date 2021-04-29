@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj": {}
+    "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj": {}
   },
   "projects": {
-    "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj": {
+    "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
-        "projectName": "PHP-SRePS",
-        "projectPath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
+        "projectUniqueName": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
+        "projectName": "PHPSRePs",
+        "projectPath": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
         "packagesPath": "C:\\Users\\Jonathon\\.nuget\\packages\\",
-        "outputPath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\obj\\",
+        "outputPath": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,9 +43,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "CsvHelper": {
+            "MetroModernUI": {
               "target": "Package",
-              "version": "[27.0.2, )"
+              "version": "[1.4.0, )"
             }
           },
           "imports": [
@@ -67,6 +67,9 @@
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"

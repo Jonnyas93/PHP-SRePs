@@ -6,21 +6,21 @@ namespace PHP_SRePS
 {
     public class Sale
     {
-        private string _id;
-        private string _userId;
+        private int _id;
+        private int _userId;
         private List<Product> _products;
         private List<int> _quantities;
         private DateTime _saleDate;
         
 
-        public string ID
+        public int ID
         {
             get
             {
                 return _id;
             }
         }
-        public string UserID
+        public int UserID
         {
             get
             {
@@ -50,7 +50,7 @@ namespace PHP_SRePS
             }
         }
 
-        Sale(string ID, List<Product> products, List<int> quantities, DateTime salesDate)
+        public Sale(int ID, List<Product> products, List<int> quantities, DateTime salesDate)
         {
             _id = ID;
             _products = products;
@@ -68,17 +68,19 @@ namespace PHP_SRePS
             }
             return total;
         }
-        public string GetItemList()
+        public string ItemList()
         {
             string msg = "";
             for (int i = 0; i < Products.Count; i++)
             {
-                string txt = "Name: " + _products[i].ToString() + "| Quantity:" + _quantities[i].ToString() + "\n";
+                string txt = "Name: " + _products[i].ToString()+ "| Cost:" + _products[i].Cost.ToString() + "| Quantity: " + _quantities[i].ToString() + "\n";
                 msg += txt;
             }
+            msg += "--------------------";
+            msg += "Total: " + GetTotal().ToString();
             return msg;
         }
-        public Product GetItem(string ID)
+        public Product GetItem(int ID)
         {
             for (int i = 0; i < Products.Count; i++)
             {
@@ -103,7 +105,7 @@ namespace PHP_SRePS
             _quantities.Add(quantity);
         }
 
-        public void RemoveItem(string ID, int quantity)
+        public void RemoveItem(int ID, int quantity)
         {
             for (int i = 0; i < Products.Count; i++)
             {

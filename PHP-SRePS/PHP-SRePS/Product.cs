@@ -6,10 +6,10 @@ namespace PHP_SRePS
 {
     public class Product
     {
-        private string _id;
+        private int _id;
         private string _name;
         private decimal _cost;
-        public string ID
+        public int ID
         {
             get
             {
@@ -43,11 +43,30 @@ namespace PHP_SRePS
             }
         }
 
-        Product(string id, string name, decimal cost)
+        public Product(int id, string name, decimal cost)
         {
             _id = id;
             _name = name;
             _cost = cost;
+        }
+
+        public static bool operator <(Product a, Product b)
+        {
+            bool res = false;
+            if(a.ID < b.ID)
+            {
+                res = true;
+            }
+            return res;
+        }
+        public static bool operator >(Product a, Product b)
+        {
+            bool res = false;
+            if (a.ID > b.ID)
+            {
+                res = true;
+            }
+            return res;
         }
     }
 }

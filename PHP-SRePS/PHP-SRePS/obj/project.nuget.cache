@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2ZQwyocEqY2JGtoPIXqN8APO/poWO+wogOKcMe0rJqhMPH3AQSQTZ/zl/WFMe/TakYxK/nsc4YV23iR4jvBT0A==",
+  "dgSpecHash": "aDkg7tubg/GJ5aZXz1YwBdHRd6v8AtuSg85cF1gduKWGF8wm50OCuJM1+H4xguLPJwYogE/yFLfCIetopzRLrw==",
   "success": true,
   "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jonathon\\.nuget\\packages\\csvhelper\\27.0.2\\csvhelper.27.0.2.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
   ],
   "logs": []

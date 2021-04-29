@@ -6,4 +6,8 @@
     <RootNamespace>PHP_SRePS</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="27.0.2" />
+  </ItemGroup>
+
 </Project>
