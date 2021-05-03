@@ -2,3 +2,14 @@ G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.
 G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.AssemblyInfoInputs.cache
 G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.AssemblyInfo.cs
 G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.csproj.CoreCompileInputs.cache
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\PHP-SRePS.exe
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\PHP-SRePS.deps.json
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\PHP-SRePS.runtimeconfig.json
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\PHP-SRePS.runtimeconfig.dev.json
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\PHP-SRePS.dll
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\PHP-SRePS.pdb
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\bin\Debug\netcoreapp3.1\CsvHelper.dll
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.csproj.CopyComplete
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.dll
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.pdb
+G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\obj\Debug\netcoreapp3.1\PHP-SRePS.genruntimeconfig.cache

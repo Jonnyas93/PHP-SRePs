@@ -55,7 +55,7 @@ namespace PHP_SRePS
                 for (int i = 0; i < _sales.Count; i++)
                 {
                     decimal subtotal = _sales[i].GetTotal();
-                    string txt = "Sale ID: " + _sales[i].ID + "| Sale Date: " + _sales[i].Date.Date.ToString() + "| User ID: " + _sales[i].UserID + "| Subtotal: $" + subtotal.ToString();
+                    string txt = "Sale ID: " + _sales[i].ID + "| Sale Date: " + _sales[i].Date.ToString() + "| User ID: " + _sales[i].UserID + "| Subtotal: $" + subtotal.ToString();
                     msg += txt;
                     total += subtotal;
                 }
@@ -111,40 +111,40 @@ namespace PHP_SRePS
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
             {
                 csv.WriteRecord(_id);
-                csv.WriteRecord(_reportDate);
                 csv.NextRecord();
                 csv.WriteRecord(_sales.Count);
                 csv.NextRecord();
                 for (int i = 0; i < _sales.Count; i++)
                 {
                     csv.WriteRecord(_sales[i].ID);
+                    csv.NextRecord();
                     csv.WriteRecord(_sales[i].UserID);
-                    csv.WriteRecord(_sales[i].Date);
                     csv.NextRecord();
                     csv.WriteRecord(_sales[i].Products.Count);
                     csv.NextRecord();
                     for (int a = 0; a < _sales[i].Products.Count; a++)
                     {
                         csv.WriteRecord(_sales[i].Products[a].ID);
-                        csv.WriteRecord(_sales[i].Products[a].Name);
-                        csv.WriteRecord(_sales[i].Products[a].Cost);
+                        csv.WriteField(_sales[i].Products[a].Name);
+                        csv.WriteField(_sales[i].Products[a].Cost.ToString());
                         csv.WriteRecord(_sales[i].Quantities[a]);
                         csv.NextRecord();
                     }
+
                 }
             }
         }
         public void readCSV(string name)
         {
             List<Sale> Sales = new List<Sale>();
+            DateTime control = DateTime.Today;
             string fullname = name + ".csv";
             using (var reader = new StreamReader(fullname))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
-                int ID = csv.GetRecord<int>();
                 csv.Read();
-                DateTime date = csv.GetRecord<DateTime>();
-                csv.Read();
+                string idString = csv.GetField(0);
+                int ID = int.Parse(idString);
                 int salesCount = csv.GetRecord<int>();
                 csv.Read();
                 for (int i = 0; i < salesCount; i++)
@@ -153,20 +153,19 @@ namespace PHP_SRePS
                     csv.Read();
                     int saleUserId = csv.GetRecord<int>();
                     csv.Read();
-                    DateTime saleDate = csv.GetRecord<DateTime>();
-                    csv.Read();
-                    int saleProductQty = csv.GetRecord<int>();
+                    int prodCount = csv.GetRecord<int>();
                     csv.Read();
                     List<Product> tempProducts = new List<Product>();
                     List<int> tempQuantity = new List<int>();
-                    Sale tempSale = new Sale(saleId, saleUserId, tempProducts, tempQuantity, saleDate);
-                    for (int a = 0; a < saleProductQty; a++)
+                    Sale tempSale = new Sale(saleId, saleUserId, tempProducts, tempQuantity, control);
+                    for (int a = 0; a < prodCount; a++)
                     {
                         int prodID = csv.GetRecord<int>();
                         csv.Read();
-                        string prodName = csv.GetRecord<string>();
+                        string prodName = csv.GetRecords<string>();
                         csv.Read();
-                        decimal prodPrice = csv.GetRecord<decimal>();
+                        string prodPriceString = csv.GetField(0);
+                        decimal prodPrice = decimal.Parse(prodPriceString);
                         csv.Read();
                         int prodQ = csv.GetRecord<int>();
                         csv.Read();
@@ -176,7 +175,7 @@ namespace PHP_SRePS
                     Sales.Add(tempSale);
                 }
                 _id = ID;
-                _reportDate = date;
+                _reportDate = control;
                 _sales = Sales;
             }
         }

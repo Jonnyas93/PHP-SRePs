@@ -11,7 +11,7 @@ namespace PHP_SRePS
     {
         private int _id;
         private List<Inventory> _inventories;
-        private DateTime _reportDate;
+        private string _reportDate;
 
         public int ID
         {
@@ -27,7 +27,7 @@ namespace PHP_SRePS
                 return _inventories;
             }
         }
-        public DateTime ReportDate
+        public string ReportDate
         {
             get
             {
@@ -35,9 +35,10 @@ namespace PHP_SRePS
             }
         }
 
-        public InventoryReport(int ID, List<Sale> Sales, DateTime Date)
+        public InventoryReport(int ID, List<Sale> Sales, string Date)
         {
             _id = ID;
+            _inventories = new List<Inventory>();
             for (int i = 0; i < Sales.Count; i++)
             {
                 for (int a = 0; a < Sales[i].Products.Count ; a++)

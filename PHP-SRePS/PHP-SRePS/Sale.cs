@@ -41,7 +41,6 @@ namespace PHP_SRePS
                 return _quantities;
             }
         }
-
         public DateTime Date
         {
             get
