@@ -61,7 +61,8 @@ namespace PHP_SRePS
                 csv.NextRecord();
                 for (int i = 0; i < _inventories.Count; i++)
                 {
-                    
+                    csv.WriteRecord(_inventories[i].Product);
+                    csv.WriteRecord(_inventories[i].Stock);
                     csv.NextRecord();
                 }
             }
