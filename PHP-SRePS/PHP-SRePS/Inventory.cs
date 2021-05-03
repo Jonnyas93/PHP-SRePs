@@ -9,6 +9,7 @@ namespace PHP_SRePS
         private Product _product;
         private int _stock;
 
+
         public Product Product
         {
             get
@@ -21,6 +22,10 @@ namespace PHP_SRePS
             get
             {
                 return _stock;
+            }
+            set
+            {
+                _stock = value;
             }
         }
 

@@ -59,6 +59,8 @@ namespace PHP_SRePS
                 csv.WriteRecord(_id);
                 csv.WriteRecord(_reportDate);
                 csv.NextRecord();
+                csv.WriteRecord(_inventories.Count); 
+                csv.NextRecord();
                 for (int i = 0; i < _inventories.Count; i++)
                 {
                     csv.WriteRecord(_inventories[i].Product);

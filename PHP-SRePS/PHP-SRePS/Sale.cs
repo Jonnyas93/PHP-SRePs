@@ -50,9 +50,10 @@ namespace PHP_SRePS
             }
         }
 
-        public Sale(int ID, List<Product> products, List<int> quantities, DateTime salesDate)
+        public Sale(int ID, int UserID, List<Product> products, List<int> quantities, DateTime salesDate)
         {
             _id = ID;
+            _userId = UserID;
             _products = products;
             _quantities = quantities;
             _saleDate = salesDate;
@@ -98,6 +99,7 @@ namespace PHP_SRePS
             {
                 if (_products[i].ID == ID)
                 {
+                    _quantities[i] += quantity;
                     return;
                 }
             }
