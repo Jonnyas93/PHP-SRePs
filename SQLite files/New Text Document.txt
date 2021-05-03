@@ -1,0 +1,33 @@
+ check out the link for accessing and working with sqlite db
+
+https://www.youtube.com/watch?v=ayp3tHEkRc0
+
+Or 
+https://zetcode.com/csharp/sqlite/
+
+
+
+
+Insert data SQLite commands
+=============  For add user ===========================
+
+INSERT INTO User
+(user_name,password)
+VALUES ("testuser", "testpass");
+
+=============  For add product ===========================
+INSERT INTO Product
+(product_name, cost_per_item)
+VALUES ("Panadol Extra", 5.45);
+
+=============  For add sales ===========================
+INSERT INTO sales
+(product_id, user_id, datetime, quantity)
+VALUES (1, 1, datetime('now', 'localtime'), 2);
+
+=============  For add inventory records ===========================
+
+Same as sales table
+ 
+=============  View all products (Same for others) ===========================
+SELECT * FROM Product;
