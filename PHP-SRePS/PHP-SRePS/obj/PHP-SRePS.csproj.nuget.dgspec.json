@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj": {}
+    "C:\\Users\\jonat\\Documents\\PHP-SRePs\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj": {}
   },
   "projects": {
-    "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj": {
+    "C:\\Users\\jonat\\Documents\\PHP-SRePs\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
+        "projectUniqueName": "C:\\Users\\jonat\\Documents\\PHP-SRePs\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
         "projectName": "PHP-SRePS",
-        "projectPath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
-        "packagesPath": "C:\\Users\\Jonathon\\.nuget\\packages\\",
-        "outputPath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\obj\\",
+        "projectPath": "C:\\Users\\jonat\\Documents\\PHP-SRePs\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
+        "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jonat\\Documents\\PHP-SRePs\\PHP-SRePS\\PHP-SRePS\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Jonathon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jonat\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,7 +29,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -41,43 +40,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
-          "dependencies": {
-            "CsvHelper": {
-              "target": "Package",
-              "version": "[27.0.2, )"
-            },
-            "SQLite": {
-              "target": "Package",
-              "version": "[3.13.0, )"
-            },
-            "System.Data.SQLite": {
-              "target": "Package",
-              "version": "[1.0.113.7, )"
-            }
-          },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.13, 3.1.13]"
-            }
-          ],
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
