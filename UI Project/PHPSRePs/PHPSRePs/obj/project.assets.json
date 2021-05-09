@@ -45,11 +45,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
+      "projectUniqueName": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
       "projectName": "PHPSRePs",
-      "projectPath": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
+      "projectPath": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
       "packagesPath": "C:\\Users\\Jonathon\\.nuget\\packages\\",
-      "outputPath": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\obj\\",
+      "outputPath": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

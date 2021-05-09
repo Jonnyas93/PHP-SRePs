@@ -69,40 +69,18 @@ namespace PHP_SRePS
             List<Inventory> distinctProducts = new List<Inventory>();
             for (int i = 0; i < _sales.Count; i++)
             {
-                for (int a = 0; a < _sales[i].Products.Count; a++)
+                for (int b = 0; b < distinctProducts.Count; b++)
                 {
-                    for (int b = 0; b < distinctProducts.Count; b++)
+                    if (_sales[i].Product.ID == distinctProducts[b].Product.ID)
                     {
-                        if (_sales[i].Products[a].ID == distinctProducts[b].Product.ID)
-                        {
-                            distinctProducts[b].Stock += _sales[i].Quantities[a];
-                            break;
-                        }
-                        Inventory tempInv = new Inventory(_sales[i].Products[a], _sales[i].Quantities[a]);
-                        distinctProducts.Add(tempInv);
+                        distinctProducts[b].Stock += _sales[i].Quantity;
+                        break;
                     }
+                    Inventory tempInv = new Inventory(_sales[i].Product, _sales[i].Quantity);
+                    distinctProducts.Add(tempInv);
                 }
             }
             return distinctProducts;
-        }
-
-        private List<string> InvListProdToStringList(List<Inventory> invList)
-        {
-            List<string> prodNames = new List<string>();
-            for (int i = 0; i < invList.Count; i++)
-            {
-                prodNames.Add(invList[i].Product.Name);
-            }
-            return prodNames;
-        }
-        private List<int> InvListProdToIntList(List<Inventory> invList)
-        {
-            List<int> prodQty = new List<int>();
-            for (int i = 0; i < invList.Count; i++)
-            {
-                prodQty.Add(invList[i].Stock);
-            }
-            return prodQty;
         }
         public void writeCSV(string name)
         {
@@ -120,17 +98,11 @@ namespace PHP_SRePS
                     csv.NextRecord();
                     csv.WriteRecord(_sales[i].UserID);
                     csv.NextRecord();
-                    csv.WriteRecord(_sales[i].Products.Count);
+                    csv.WriteRecord(_sales[i].Product.ID);
+                    csv.WriteField(_sales[i].Product.Name);
+                    csv.WriteField(_sales[i].Product.Cost.ToString());
+                    csv.WriteRecord(_sales[i].Quantity);
                     csv.NextRecord();
-                    for (int a = 0; a < _sales[i].Products.Count; a++)
-                    {
-                        csv.WriteRecord(_sales[i].Products[a].ID);
-                        csv.WriteField(_sales[i].Products[a].Name);
-                        csv.WriteField(_sales[i].Products[a].Cost.ToString());
-                        csv.WriteRecord(_sales[i].Quantities[a]);
-                        csv.NextRecord();
-                    }
-
                 }
             }
         }

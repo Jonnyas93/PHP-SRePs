@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "71q65QFZazy7QhTVb2OJ1g2zrpcfPrlt5hh1cUOv3rcTVAKCMPUcUM1PTBP8NvBOBILpAnhAxJ/Vu8y27oUHgg==",
+  "dgSpecHash": "Zh3412YT04gKm/+kBMr/QEvGmFa5K2/+wKv6776EnND/bFOidvaN4iHzhLIwZGOQWa/BEk6ACq33aN6scfN7kQ==",
   "success": true,
   "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\PHP-SRePS\\PHP-SRePS\\PHP-SRePS.csproj",
   "expectedPackageFiles": [
@@ -28,8 +28,7 @@
     "C:\\Users\\Jonathon\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.6.0\\system.security.cryptography.protecteddata.4.6.0.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\system.security.permissions\\4.6.0\\system.security.permissions.4.6.0.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\system.security.principal.windows\\4.6.0\\system.security.principal.windows.4.6.0.nupkg.sha512",
-    "C:\\Users\\Jonathon\\.nuget\\packages\\system.windows.extensions\\4.6.0\\system.windows.extensions.4.6.0.nupkg.sha512",
-    "C:\\Users\\Jonathon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
+    "C:\\Users\\Jonathon\\.nuget\\packages\\system.windows.extensions\\4.6.0\\system.windows.extensions.4.6.0.nupkg.sha512"
   ],
   "logs": []
 }

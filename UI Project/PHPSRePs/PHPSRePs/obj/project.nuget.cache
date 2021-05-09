@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/Z1KoIaMB4jcCvNd5EAtu05yDZx/nnNjVtTqnVPNkksgUTIrpFRPikfTHsCiBR7C2o4scuF+Rm4SilcZe1WCmA==",
+  "dgSpecHash": "zWIy7QOVuMa639TnKDvMTXaruA7QvAAXIm1VfZQPGWPVpmPTNvJwjZc4yvHuFHY3U8QZ+dRNYaP60YmekwdSwQ==",
   "success": true,
-  "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\PHPSRePs-20210428T035939Z-001\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
+  "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonathon\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.13\\microsoft.netcore.app.host.win-x64.3.1.13.nupkg.sha512"
