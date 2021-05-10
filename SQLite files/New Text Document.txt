@@ -22,8 +22,8 @@ VALUES ("Panadol Extra", 5.45);
 
 =============  For add sales ===========================
 INSERT INTO sales
-(product_id, user_id, datetime, quantity)
-VALUES (1, 1, datetime('now', 'localtime'), 2);
+(product_id, user_id, datetime, quantity, sales_number)
+VALUES (1, 1, datetime('now', 'localtime'), 2, 1);
 
 =============  For add inventory records ===========================
 
