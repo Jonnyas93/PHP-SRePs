@@ -81,7 +81,7 @@ namespace PHP_SRePS
             sqlite_cmd.CommandText = msg;
             sqlite_cmd.ExecuteNonQuery();
         }
-        static void EditSale(SQLiteConnection conn,int ID, int userID, int productID, int stock, DateTime saleDate)
+        static void EditSale(SQLiteConnection conn, int ID, int userID, int productID, int stock, DateTime saleDate)
         {
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = conn.CreateCommand();
