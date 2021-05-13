@@ -30,14 +30,14 @@ namespace PHP_SRePS
         {
             get
             {
-                return _products;
+                return _product;
             }
         }
         public int Quantity
         {
             get
             {
-                return _quantities;
+                return _quantity;
             }
         }
         public DateTime Date

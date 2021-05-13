@@ -14,12 +14,14 @@ namespace PHP_SRePS
 
         static void Main(string[] args)
         {
+            int testId = 24;
+            DateTime dateToDisplay = new DateTime(2009, 6, 1, 8, 42, 50);
             SQLiteConnection sqlite_conn;
             sqlite_conn = CreateConnection();
-            //AddSale(sqlite_conn, 1, 1, 2, DateTime.Now);
-            EditSale(sqlite_conn, 15, 2, 2, 7, DateTime.Now.AddDays(1));
-            DisplaySale(sqlite_conn, 15);
-            DeleteSale(sqlite_conn, 15);
+            AddSale(sqlite_conn, 1, 1, dateToDisplay, 1, 1);
+            EditSale(sqlite_conn, testId, 3, 1, dateToDisplay.AddDays(1), 5, 2);
+            DisplaySale(sqlite_conn, testId);
+            DeleteSale(sqlite_conn, testId);
             sqlite_conn.Close();
         }
 
@@ -29,8 +31,8 @@ namespace PHP_SRePS
             SQLiteConnection sqlite_conn;
             // Create a new database connection:
             sqlite_conn = new SQLiteConnection(@"Data Source=G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\PHP.db");
-           // Open the connection:
-         try
+            // Open the connection:
+            try
             {
                 sqlite_conn.Open();
             }
@@ -72,20 +74,31 @@ namespace PHP_SRePS
             }
             conn.Close();
         }
-        static void AddSale(SQLiteConnection conn, int userID, int productID, int stock, DateTime saleDate)
+        static void AddSale(SQLiteConnection conn, int productID, int userID, DateTime saleDate, int stock, int saleNumber)
         {
 
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = conn.CreateCommand();
-            string msg = "INSERT INTO Sales(product_id, user_id, datetime, quantity) VALUES(" + productID.ToString() + "," + userID.ToString() + "," +  saleDate.ToShortDateString() + "," + stock.ToString() + "); ";
-            sqlite_cmd.CommandText = msg;
+            string msg = "INSERT INTO Sales([product_id], [user_id], [datetime], [quantity], [sales_number]) VALUES(@productID, @userID, @saleDate, @stock, @saleNumber);";
+            sqlite_cmd.CommandText = msg;//"INSERT INTO tblActivity ([Activity_Category], [Activity_Category_Sub], [Activity_Start], [Activity_End], [Activity_Duration]) VALUES (@ActivityCategory, @ActivityCategorySub, @ActivityStart, @ActivityEnd, @ActivityDuration);";
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@productID", productID));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@userID", userID));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleDate", saleDate));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@stock", stock));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleNumber", saleNumber));
             sqlite_cmd.ExecuteNonQuery();
         }
-        static void EditSale(SQLiteConnection conn, int ID, int userID, int productID, int stock, DateTime saleDate)
+        static void EditSale(SQLiteConnection conn, int saleID, int productID, int userID, DateTime saleDate, int stock, int saleNumber)
         {
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = conn.CreateCommand();
-            string msg = "UPDATE Sales SET product_id = " + productID + ", user_id = " + userID + ", datetime = " + saleDate.ToShortDateString() + ", quantity = " + stock + " WHERE sales_id = " + ID + ";";
+            string msg = "UPDATE Sales SET product_id = @productID, user_id = @userID, datetime = @saleDate, quantity = @stock, sales_number = @saleNumber WHERE sales_id = @saleID;";
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@productID", productID));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@userID", userID));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleDate", saleDate));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@stock", stock));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleNumber", saleNumber));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleID", saleID));
             sqlite_cmd.CommandText = msg;
             sqlite_cmd.ExecuteNonQuery();
         }
