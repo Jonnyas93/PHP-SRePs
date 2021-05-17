@@ -1,4 +1,6 @@
-﻿
+﻿using System;
+using System.Data.SQLite;
+
 namespace PHPSRePs
 {
     partial class staffPosForm
@@ -19,6 +21,37 @@ namespace PHPSRePs
                 components.Dispose();
             }
             base.Dispose(disposing);
+        }
+        static SQLiteConnection CreateConnection()
+        {
+
+            SQLiteConnection sqlite_conn;
+            // Create a new database connection:
+            sqlite_conn = new SQLiteConnection(@"Data Source=G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\PHP.db");
+            // Open the connection:
+            try
+            {
+                sqlite_conn.Open();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return sqlite_conn;
+        }
+        static void AddSale(SQLiteConnection conn, int productID, int userID, DateTime saleDate, int stock, int saleNumber)
+        {
+
+            SQLiteCommand sqlite_cmd;
+            sqlite_cmd = conn.CreateCommand();
+            string msg = "INSERT INTO Sales([product_id], [user_id], [datetime], [quantity], [sales_number]) VALUES(@productID, @userID, @saleDate, @stock, @saleNumber);";
+            sqlite_cmd.CommandText = msg;//"INSERT INTO tblActivity ([Activity_Category], [Activity_Category_Sub], [Activity_Start], [Activity_End], [Activity_Duration]) VALUES (@ActivityCategory, @ActivityCategorySub, @ActivityStart, @ActivityEnd, @ActivityDuration);";
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@productID", productID));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@userID", userID));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleDate", saleDate));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@stock", stock));
+            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleNumber", saleNumber));
+            sqlite_cmd.ExecuteNonQuery();
         }
 
         #region Windows Form Designer generated code
@@ -263,7 +296,7 @@ namespace PHPSRePs
             // btnPosSearchForAnItem
             // 
             this.btnPosSearchForAnItem.ActiveControl = null;
-            this.btnPosSearchForAnItem.Location = new System.Drawing.Point(717, 11);
+            this.btnPosSearchForAnItem.Location = new System.Drawing.Point(692, 20);
             this.btnPosSearchForAnItem.Name = "btnPosSearchForAnItem";
             this.btnPosSearchForAnItem.Size = new System.Drawing.Size(163, 48);
             this.btnPosSearchForAnItem.TabIndex = 18;
@@ -276,7 +309,7 @@ namespace PHPSRePs
             // 
             this.btnStaffPosLogout.ActiveControl = null;
             this.btnStaffPosLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnStaffPosLogout.Location = new System.Drawing.Point(923, 11);
+            this.btnStaffPosLogout.Location = new System.Drawing.Point(881, 20);
             this.btnStaffPosLogout.Name = "btnStaffPosLogout";
             this.btnStaffPosLogout.Size = new System.Drawing.Size(75, 44);
             this.btnStaffPosLogout.TabIndex = 19;

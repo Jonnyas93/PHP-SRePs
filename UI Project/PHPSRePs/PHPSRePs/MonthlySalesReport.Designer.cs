@@ -128,7 +128,7 @@ namespace PHPSRePs
             // btnSalesReportBack
             // 
             this.btnSalesReportBack.ActiveControl = null;
-            this.btnSalesReportBack.Location = new System.Drawing.Point(876, 19);
+            this.btnSalesReportBack.Location = new System.Drawing.Point(876, 49);
             this.btnSalesReportBack.Name = "btnSalesReportBack";
             this.btnSalesReportBack.Size = new System.Drawing.Size(101, 44);
             this.btnSalesReportBack.TabIndex = 17;

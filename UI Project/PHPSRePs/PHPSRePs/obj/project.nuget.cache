@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "w8b/KziPp1Dn97MRuvMx2JSmQzmJC0jZAYkDppsFB9p8i8bFavTkliozQWrkOsBvJ9kyhJaiGNX9SJ8AIiqVgQ==",
+  "dgSpecHash": "F89QTVbDYbVaL6T7dPv8RsLHx6cng+20Xl4MeTgrIcxl+TlR1gi+KcOH11CWRsQ9LKgGyRH8E/2sqGWqswn1JA==",
   "success": true,
   "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jonathon\\.nuget\\packages\\csvhelper\\27.0.2\\csvhelper.27.0.2.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\metromodernui\\1.4.0\\metromodernui.1.4.0.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\microsoft.csharp\\4.6.0\\microsoft.csharp.4.6.0.nupkg.sha512",

@@ -32,9 +32,9 @@ namespace PHPSRePs
 
         private void btnAdminSalesData_Click(object sender, EventArgs e)
         {
-            AdminSalesDataForm adminSales = new AdminSalesDataForm();
+            staffPosForm staffPosForm = new staffPosForm();
             this.Hide();
-            adminSales.Show();
+            staffPosForm.Show();
 
         }
 

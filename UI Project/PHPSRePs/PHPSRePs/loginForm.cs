@@ -32,7 +32,7 @@ namespace PHPSRePs
         static SQLiteConnection CreateConnection()
         {
             SQLiteConnection sqlite_conn;
-            sqlite_conn = new SQLiteConnection("Data Source= C:/Users/lakda/Desktop/PHPSRePs/PHPSRePs/PHPSRePs/PHP.db;" + " Version=3;");
+            sqlite_conn = new SQLiteConnection("Data Source= G:/Documents/Managing IT Project/Repo/UI Project/PHPSRePs/PHPSRePs/PHP.db;" + " Version=3;");
             try
             {
                 sqlite_conn.Open();
@@ -66,29 +66,20 @@ namespace PHPSRePs
 
             userName = txtLoginUsername.Text;
             password = txtLoginPassword.Text;
-            if (userName == "admin" && password == "admin")
-            {
-                AdminMenuForm adminForm = new AdminMenuForm();
-                this.Hide();
-                adminForm.Show();
-
-            }
-            else
-            {
                /* sqlite_cmd.CommandText = String.Format( "SELECT count(*) FROM user WHERE user_name = {0}",userName);
                 int count = Convert.ToInt32(sqlite_cmd.ExecuteScalar());
                 if (count == 1)
                 {*/
-                    sqlite_cmd.CommandText = String.Format("SELECT password FROM User WHERE user_name = {0};", userName);
+                    sqlite_cmd.CommandText = String.Format("SELECT password FROM User WHERE user_name = '{0}'", userName);
                     sqlite_dataReader = sqlite_cmd.ExecuteReader();
                     while (sqlite_dataReader.Read())
                     {
                         string correctPassword = sqlite_dataReader.GetString(0);
                         if (correctPassword == password)
                         {
-                            staffPosForm staffForm = new staffPosForm();
+                            AdminMenuForm adminForm = new AdminMenuForm();
                             this.Hide();
-                            staffForm.Show();
+                            adminForm.Show();
                         }
                         else
                         {
@@ -102,7 +93,7 @@ namespace PHPSRePs
                     MessageBox.Show("Incorrect Username...!");
                 }*/
                 
-            }
+           
             
         }
     }

@@ -19,9 +19,10 @@ namespace PHP_SRePS
             SQLiteConnection sqlite_conn;
             sqlite_conn = CreateConnection();
             AddSale(sqlite_conn, 1, 1, dateToDisplay, 1, 1);
-            EditSale(sqlite_conn, testId, 3, 1, dateToDisplay.AddDays(1), 5, 2);
-            DisplaySale(sqlite_conn, testId);
-            DeleteSale(sqlite_conn, testId);
+            //EditSale(sqlite_conn, testId, 3, 1, dateToDisplay.AddDays(1), 5, 2);
+            //DisplaySale(sqlite_conn, testId);
+            //Sale test = GetSale(sqlite_conn, testId);
+            //DeleteSale(sqlite_conn, testId);
             sqlite_conn.Close();
         }
 
@@ -151,11 +152,12 @@ namespace PHP_SRePS
             sqlite_datareader = sqlite_cmd.ExecuteReader();
             while (sqlite_datareader.Read())
             {
-                var productID = sqlite_datareader.GetValue(1);
+                var productIDv = sqlite_datareader.GetValue(1);
                 var userID = sqlite_datareader.GetValue(2);
                 var dateTime = sqlite_datareader.GetValue(3);
                 var stock = sqlite_datareader.GetValue(4);
-                Product saleProduct = GetProduct(conn,(int)productID);
+                int 
+                Product saleProduct = GetProduct(conn, productID);
                 Sale fetchedSale = new Sale(ID, (int)userID, saleProduct, (int)stock, (DateTime)dateTime);
                 return fetchedSale;
             }

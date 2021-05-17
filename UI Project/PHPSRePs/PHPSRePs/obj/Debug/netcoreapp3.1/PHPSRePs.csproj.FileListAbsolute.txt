@@ -40,3 +40,46 @@ C:\Users\lakda\Desktop\PHPSRePs\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtim
 C:\Users\lakda\Desktop\PHPSRePs\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\lakda\Desktop\PHPSRePs\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.InventoryReport.resources
 C:\Users\lakda\Desktop\PHPSRePs\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.MonthlySalesReport.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.csprojAssemblyReference.cache
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.adminInventory.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.AdminMenuForm.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.AdminSalesDataForm.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.AdminStaffManagementForm.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.InventoryReport.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.loginForm.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.MonthlySalesReport.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.Properties.Resources.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.StaffInventorySearch.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.staffPosForm.resources
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.csproj.GenerateResource.cache
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.AssemblyInfoInputs.cache
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.AssemblyInfo.cs
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.csproj.CoreCompileInputs.cache
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.pdb
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\PHPSRePs.exe
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\PHPSRePs.deps.json
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\PHPSRePs.runtimeconfig.json
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\PHPSRePs.runtimeconfig.dev.json
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\PHPSRePs.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\PHPSRePs.pdb
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\CsvHelper.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\EntityFramework.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\MetroFramework.Design.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\MetroFramework.Fonts.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\MetroFramework.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\System.Data.SQLite.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\System.Data.SQLite.EF6.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\SQLite.Interop.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\SQLite.Interop.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SQLite.Interop.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SQLite.Interop.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.csproj.CopyComplete
+G:\Documents\Managing IT Project\Repo\UI Project\PHPSRePs\PHPSRePs\obj\Debug\netcoreapp3.1\PHPSRePs.genruntimeconfig.cache

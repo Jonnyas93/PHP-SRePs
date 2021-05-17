@@ -29,7 +29,7 @@ namespace PHPSRePs
         static SQLiteConnection CreateConnection()
         {
             SQLiteConnection sqlite_conn;
-            sqlite_conn = new SQLiteConnection("Data Source= C:/Users/lakda/Desktop/PHPSRePs/PHPSRePs/PHPSRePs/PHP.db;" + " Version=3;");
+            sqlite_conn = new SQLiteConnection("Data Source= G:/Documents/Managing IT Project/Repo/UI Project/PHPSRePs/PHPSRePs/PHP.db;" + " Version=3;");
             try
             {
                 sqlite_conn.Open();
@@ -67,7 +67,8 @@ namespace PHPSRePs
             selectedYear = this.SalesReportYear.GetItemText(this.SalesReportYear.SelectedItem);
 
 
-            sqlite_cmd.CommandText = String.Format("SELECT * FROM Sales WHERE month = {0} AND year ={1};", selectedMonth, selectedYear);
+            //sqlite_cmd.CommandText = String.Format("SELECT * FROM Sales WHERE month = '{0}' AND year ='{1}';", selectedMonth, selectedYear);
+            sqlite_cmd.CommandText = String.Format("SELECT * FROM Sales;");
             SQLiteDataAdapter sda = new SQLiteDataAdapter(sqlite_cmd);
             DataTable dt = new DataTable("Sales");
             sda.Fill(dt);
@@ -79,13 +80,13 @@ namespace PHPSRePs
 
             using (sqlite_conn)
             {
-                sqlite_cmd.CommandText = String.Format("SELECT total FROM Sales WHERE month = {0} AND year ={1};", selectedMonth, selectedYear);
+                sqlite_cmd.CommandText = String.Format("SELECT * FROM Sales;");
                 using (sqlite_dataReader = sqlite_cmd.ExecuteReader())
                 {
                     while (sqlite_dataReader.Read())
                     {
 
-                        TotalSales = TotalSales + (double)sqlite_dataReader["total"];
+                        TotalSales = TotalSales + Convert.ToDouble(sqlite_dataReader["quantity"]);
 
                     }
                 }
