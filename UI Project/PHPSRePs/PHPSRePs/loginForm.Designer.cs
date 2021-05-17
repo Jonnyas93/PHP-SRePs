@@ -32,7 +32,7 @@ namespace PHPSRePs
         {
             this.lblLoginUsername = new MetroFramework.Controls.MetroLabel();
             this.lblLoginPassword = new MetroFramework.Controls.MetroLabel();
-            this.txtLoginUserName = new System.Windows.Forms.TextBox();
+            this.txtLoginUsername = new System.Windows.Forms.TextBox();
             this.txtLoginPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
@@ -58,12 +58,12 @@ namespace PHPSRePs
             this.lblLoginPassword.TabIndex = 1;
             this.lblLoginPassword.Text = "Password";
             // 
-            // txtLoginUserName
+            // txtLoginUsername
             // 
-            this.txtLoginUserName.Location = new System.Drawing.Point(163, 160);
-            this.txtLoginUserName.Name = "txtLoginUserName";
-            this.txtLoginUserName.Size = new System.Drawing.Size(151, 23);
-            this.txtLoginUserName.TabIndex = 2;
+            this.txtLoginUsername.Location = new System.Drawing.Point(163, 160);
+            this.txtLoginUsername.Name = "txtLoginUsername";
+            this.txtLoginUsername.Size = new System.Drawing.Size(151, 23);
+            this.txtLoginUsername.TabIndex = 2;
             // 
             // txtLoginPassword
             // 
@@ -90,7 +90,7 @@ namespace PHPSRePs
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtLoginPassword);
-            this.Controls.Add(this.txtLoginUserName);
+            this.Controls.Add(this.txtLoginUsername);
             this.Controls.Add(this.lblLoginPassword);
             this.Controls.Add(this.lblLoginUsername);
             this.Name = "loginForm";
@@ -105,7 +105,7 @@ namespace PHPSRePs
 
         private MetroFramework.Controls.MetroLabel lblLoginUsername;
         private MetroFramework.Controls.MetroLabel lblLoginPassword;
-        private System.Windows.Forms.TextBox txtLoginUserName;
+        private System.Windows.Forms.TextBox txtLoginUsername;
         private System.Windows.Forms.TextBox txtLoginPassword;
         private MetroFramework.Controls.MetroButton btnLogin;
     }

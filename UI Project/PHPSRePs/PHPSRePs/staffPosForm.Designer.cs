@@ -43,9 +43,9 @@ namespace PHPSRePs
             this.btnPosCancelSale = new MetroFramework.Controls.MetroButton();
             this.btnPosRemoveItem = new MetroFramework.Controls.MetroButton();
             this.lblPosItemNo = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.txtxPosItemNo = new System.Windows.Forms.TextBox();
+            this.lblPosItemName = new MetroFramework.Controls.MetroLabel();
+            this.umberOfItems = new MetroFramework.Controls.MetroLabel();
+            this.txtPosItemNo = new System.Windows.Forms.TextBox();
             this.txtPosItemName = new System.Windows.Forms.TextBox();
             this.txtPosNumberOfItems = new System.Windows.Forms.TextBox();
             this.btnPosItemAdd = new MetroFramework.Controls.MetroButton();
@@ -203,30 +203,30 @@ namespace PHPSRePs
             this.lblPosItemNo.TabIndex = 10;
             this.lblPosItemNo.Text = "Item No :";
             // 
-            // metroLabel1
+            // lblPosItemName
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(749, 182);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(82, 19);
-            this.metroLabel1.TabIndex = 11;
-            this.metroLabel1.Text = "Item Name :";
+            this.lblPosItemName.AutoSize = true;
+            this.lblPosItemName.Location = new System.Drawing.Point(749, 182);
+            this.lblPosItemName.Name = "lblPosItemName";
+            this.lblPosItemName.Size = new System.Drawing.Size(82, 19);
+            this.lblPosItemName.TabIndex = 11;
+            this.lblPosItemName.Text = "Item Name :";
             // 
-            // metroLabel2
+            // umberOfItems
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(749, 264);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(116, 19);
-            this.metroLabel2.TabIndex = 12;
-            this.metroLabel2.Text = "Number of Items :";
+            this.umberOfItems.AutoSize = true;
+            this.umberOfItems.Location = new System.Drawing.Point(749, 264);
+            this.umberOfItems.Name = "umberOfItems";
+            this.umberOfItems.Size = new System.Drawing.Size(116, 19);
+            this.umberOfItems.TabIndex = 12;
+            this.umberOfItems.Text = "Number of Items :";
             // 
-            // txtxPosItemNo
+            // txtPosItemNo
             // 
-            this.txtxPosItemNo.Location = new System.Drawing.Point(749, 136);
-            this.txtxPosItemNo.Name = "txtxPosItemNo";
-            this.txtxPosItemNo.Size = new System.Drawing.Size(228, 23);
-            this.txtxPosItemNo.TabIndex = 13;
+            this.txtPosItemNo.Location = new System.Drawing.Point(749, 136);
+            this.txtPosItemNo.Name = "txtPosItemNo";
+            this.txtPosItemNo.Size = new System.Drawing.Size(228, 23);
+            this.txtPosItemNo.TabIndex = 13;
             // 
             // txtPosItemName
             // 
@@ -298,9 +298,9 @@ namespace PHPSRePs
             this.Controls.Add(this.btnPosItemAdd);
             this.Controls.Add(this.txtPosNumberOfItems);
             this.Controls.Add(this.txtPosItemName);
-            this.Controls.Add(this.txtxPosItemNo);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
+            this.Controls.Add(this.txtPosItemNo);
+            this.Controls.Add(this.umberOfItems);
+            this.Controls.Add(this.lblPosItemName);
             this.Controls.Add(this.lblPosItemNo);
             this.Controls.Add(this.btnPosRemoveItem);
             this.Controls.Add(this.btnPosCancelSale);
@@ -343,5 +343,9 @@ namespace PHPSRePs
         private MetroFramework.Controls.MetroLabel lblPosItemAddMessage;
         private MetroFramework.Controls.MetroTile btnPosSearchForAnItem;
         private MetroFramework.Controls.MetroTile btnStaffPosLogout;
+        private MetroFramework.Controls.MetroLabel PosItemName;
+        private System.Windows.Forms.TextBox txtPosItemNo;
+        private MetroFramework.Controls.MetroLabel lblPosItemName;
+        private MetroFramework.Controls.MetroLabel umberOfItems;
     }
 }

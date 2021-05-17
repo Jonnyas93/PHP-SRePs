@@ -44,5 +44,19 @@ namespace PHPSRePs
             this.Hide();
             adminstaff.Show();
         }
+
+        private void btnAdminSalesReports_Click(object sender, EventArgs e)
+        {
+            MonthlySalesReport sales = new MonthlySalesReport();
+            this.Hide();
+            sales.Show();
+        }
+
+        private void btnAdminInventoryReports_Click(object sender, EventArgs e)
+        {
+            InventoryReport inventoryRep = new InventoryReport();
+            this.Hide();
+            inventoryRep.Show();
+        }
     }
 }

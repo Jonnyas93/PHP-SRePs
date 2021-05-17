@@ -163,7 +163,6 @@ namespace PHPSRePs
             this.Controls.Add(this.txtStaffInventoryItemNo);
             this.Controls.Add(this.grdStaffInventory);
             this.Name = "StaffInventorySearch";
-            this.Text = "Inventory";
             ((System.ComponentModel.ISupportInitialize)(this.grdStaffInventory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

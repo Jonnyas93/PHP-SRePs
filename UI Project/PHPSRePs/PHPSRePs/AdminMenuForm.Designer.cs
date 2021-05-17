@@ -77,6 +77,7 @@ namespace PHPSRePs
             this.btnAdminSalesReports.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnAdminSalesReports.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnAdminSalesReports.UseSelectable = true;
+            this.btnAdminSalesReports.Click += new System.EventHandler(this.btnAdminSalesReports_Click);
             // 
             // btnAdminStaffManagement
             // 
@@ -121,6 +122,7 @@ namespace PHPSRePs
             this.btnAdminInventoryReports.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.btnAdminInventoryReports.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
             this.btnAdminInventoryReports.UseSelectable = true;
+            this.btnAdminInventoryReports.Click += new System.EventHandler(this.btnAdminInventoryReports_Click);
             // 
             // AdminMenuForm
             // 
