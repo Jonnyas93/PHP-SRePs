@@ -296,7 +296,7 @@ namespace PHPSRePs
             // btnPosSearchForAnItem
             // 
             this.btnPosSearchForAnItem.ActiveControl = null;
-            this.btnPosSearchForAnItem.Location = new System.Drawing.Point(692, 20);
+            this.btnPosSearchForAnItem.Location = new System.Drawing.Point(733, 46);
             this.btnPosSearchForAnItem.Name = "btnPosSearchForAnItem";
             this.btnPosSearchForAnItem.Size = new System.Drawing.Size(163, 48);
             this.btnPosSearchForAnItem.TabIndex = 18;
@@ -309,9 +309,9 @@ namespace PHPSRePs
             // 
             this.btnStaffPosLogout.ActiveControl = null;
             this.btnStaffPosLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnStaffPosLogout.Location = new System.Drawing.Point(881, 20);
+            this.btnStaffPosLogout.Location = new System.Drawing.Point(902, 46);
             this.btnStaffPosLogout.Name = "btnStaffPosLogout";
-            this.btnStaffPosLogout.Size = new System.Drawing.Size(75, 44);
+            this.btnStaffPosLogout.Size = new System.Drawing.Size(75, 48);
             this.btnStaffPosLogout.TabIndex = 19;
             this.btnStaffPosLogout.Text = "Logout";
             this.btnStaffPosLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

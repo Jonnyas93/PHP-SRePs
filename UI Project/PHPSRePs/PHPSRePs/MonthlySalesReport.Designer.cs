@@ -32,17 +32,11 @@ namespace PHPSRePs
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.SalesReportMonth = new System.Windows.Forms.ComboBox();
-            this.SalesReportYear = new System.Windows.Forms.ComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.btnSalesReportClear = new System.Windows.Forms.Button();
             this.btnSalesReportGenerate = new System.Windows.Forms.Button();
             this.btnSalesReportBack = new MetroFramework.Controls.MetroTile();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblBestSellingItem = new MetroFramework.Controls.MetroLabel();
             this.lblTotalSales = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.lblTotalSalesText = new MetroFramework.Controls.MetroLabel();
             this.grdSalesReport = new MetroFramework.Controls.MetroGrid();
             this.btnImportCSV = new System.Windows.Forms.Button();
@@ -50,74 +44,9 @@ namespace PHPSRePs
             ((System.ComponentModel.ISupportInitialize)(this.grdSalesReport)).BeginInit();
             this.SuspendLayout();
             // 
-            // SalesReportMonth
-            // 
-            this.SalesReportMonth.FormattingEnabled = true;
-            this.SalesReportMonth.Items.AddRange(new object[] {
-            "January",
-            "February",
-            "March",
-            "April",
-            "May",
-            "June",
-            "July",
-            "August",
-            "September",
-            "October",
-            "November",
-            "December"});
-            this.SalesReportMonth.Location = new System.Drawing.Point(206, 139);
-            this.SalesReportMonth.Name = "SalesReportMonth";
-            this.SalesReportMonth.Size = new System.Drawing.Size(121, 23);
-            this.SalesReportMonth.TabIndex = 0;
-            // 
-            // SalesReportYear
-            // 
-            this.SalesReportYear.FormattingEnabled = true;
-            this.SalesReportYear.Items.AddRange(new object[] {
-            "2015",
-            "2016",
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021"});
-            this.SalesReportYear.Location = new System.Drawing.Point(451, 139);
-            this.SalesReportYear.Name = "SalesReportYear";
-            this.SalesReportYear.Size = new System.Drawing.Size(121, 23);
-            this.SalesReportYear.TabIndex = 1;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(362, 139);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel1.TabIndex = 2;
-            this.metroLabel1.Text = "Year :";
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(111, 139);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel2.TabIndex = 3;
-            this.metroLabel2.Text = "Month :";
-            // 
-            // btnSalesReportClear
-            // 
-            this.btnSalesReportClear.Location = new System.Drawing.Point(351, 191);
-            this.btnSalesReportClear.Name = "btnSalesReportClear";
-            this.btnSalesReportClear.Size = new System.Drawing.Size(75, 23);
-            this.btnSalesReportClear.TabIndex = 4;
-            this.btnSalesReportClear.Text = "Clear";
-            this.btnSalesReportClear.UseVisualStyleBackColor = true;
-            this.btnSalesReportClear.Click += new System.EventHandler(this.btnSalesReportClear_Click);
-            // 
             // btnSalesReportGenerate
             // 
-            this.btnSalesReportGenerate.Location = new System.Drawing.Point(497, 191);
+            this.btnSalesReportGenerate.Location = new System.Drawing.Point(830, 209);
             this.btnSalesReportGenerate.Name = "btnSalesReportGenerate";
             this.btnSalesReportGenerate.Size = new System.Drawing.Size(75, 23);
             this.btnSalesReportGenerate.TabIndex = 5;
@@ -143,7 +72,6 @@ namespace PHPSRePs
             // 
             this.groupBox1.Controls.Add(this.lblBestSellingItem);
             this.groupBox1.Controls.Add(this.lblTotalSales);
-            this.groupBox1.Controls.Add(this.metroLabel4);
             this.groupBox1.Controls.Add(this.lblTotalSalesText);
             this.groupBox1.Controls.Add(this.grdSalesReport);
             this.groupBox1.Location = new System.Drawing.Point(23, 238);
@@ -168,20 +96,10 @@ namespace PHPSRePs
             this.lblTotalSales.Size = new System.Drawing.Size(0, 0);
             this.lblTotalSales.TabIndex = 29;
             // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.metroLabel4.Location = new System.Drawing.Point(668, 164);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(112, 19);
-            this.metroLabel4.TabIndex = 28;
-            this.metroLabel4.Text = "Best Selling Item :";
-            // 
             // lblTotalSalesText
             // 
             this.lblTotalSalesText.AutoSize = true;
-            this.lblTotalSalesText.Location = new System.Drawing.Point(668, 93);
+            this.lblTotalSalesText.Location = new System.Drawing.Point(648, 22);
             this.lblTotalSalesText.Name = "lblTotalSalesText";
             this.lblTotalSalesText.Size = new System.Drawing.Size(76, 19);
             this.lblTotalSalesText.TabIndex = 27;
@@ -237,7 +155,7 @@ namespace PHPSRePs
             this.btnImportCSV.Name = "btnImportCSV";
             this.btnImportCSV.Size = new System.Drawing.Size(75, 23);
             this.btnImportCSV.TabIndex = 27;
-            this.btnImportCSV.Text = "Import CSV";
+            this.btnImportCSV.Text = "Export CSV";
             this.btnImportCSV.UseVisualStyleBackColor = true;
             this.btnImportCSV.Click += new System.EventHandler(this.btnImportCSV_Click);
             // 
@@ -250,34 +168,21 @@ namespace PHPSRePs
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSalesReportBack);
             this.Controls.Add(this.btnSalesReportGenerate);
-            this.Controls.Add(this.btnSalesReportClear);
-            this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.SalesReportYear);
-            this.Controls.Add(this.SalesReportMonth);
             this.Name = "MonthlySalesReport";
             this.Text = "Monthly Sales Report";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdSalesReport)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox SalesReportMonth;
-        private System.Windows.Forms.ComboBox SalesReportYear;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.Button btnSalesReportClear;
         private System.Windows.Forms.Button btnSalesReportGenerate;
         private MetroFramework.Controls.MetroTile btnSalesReportBack;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroLabel lblBestSellingItem;
         private MetroFramework.Controls.MetroLabel lblTotalSales;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel lblTotalSalesText;
         private MetroFramework.Controls.MetroGrid grdSalesReport;
         private System.Windows.Forms.Button btnImportCSV;

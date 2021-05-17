@@ -29,7 +29,8 @@ namespace PHPSRePs
         static SQLiteConnection CreateConnection()
         {
             SQLiteConnection sqlite_conn;
-            sqlite_conn = new SQLiteConnection("Data Source= G:/Documents/Managing IT Project/Repo/UI Project/PHPSRePs/PHPSRePs/PHP.db;" + " Version=3;");
+            sqlite_conn = new SQLiteConnection("Data Source= "+ Environment.GetEnvironmentVariable("connString")+";" + " Version=3;");
+            //sqlite_conn = new SQLiteConnection("Data Source= {AppDir}/PHPSRePs; Version=3;");
             try
             {
                 sqlite_conn.Open();
@@ -40,12 +41,6 @@ namespace PHPSRePs
             }
 
             return sqlite_conn;
-        }
-
-        private void btnSalesReportClear_Click(object sender, EventArgs e)
-        {
-            SalesReportMonth.Text = "";
-            SalesReportYear.Text = "";
         }
 
         private void btnSalesReportBack_Click(object sender, EventArgs e)
@@ -62,10 +57,6 @@ namespace PHPSRePs
             SQLiteDataReader sqlite_dataReader;
             SQLiteCommand sqlite_cmd;
             sqlite_cmd = sqlite_conn.CreateCommand();
-
-            selectedMonth = this.SalesReportMonth.GetItemText(this.SalesReportMonth.SelectedItem);
-            selectedYear = this.SalesReportYear.GetItemText(this.SalesReportYear.SelectedItem);
-
 
             //sqlite_cmd.CommandText = String.Format("SELECT * FROM Sales WHERE month = '{0}' AND year ='{1}';", selectedMonth, selectedYear);
             sqlite_cmd.CommandText = String.Format("SELECT * FROM Sales;");

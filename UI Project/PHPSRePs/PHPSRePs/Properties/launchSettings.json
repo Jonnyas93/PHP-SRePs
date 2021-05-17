@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "PHPSRePs": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "Key": "Value",
+        "connString": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\php.db"
+      }
+    }
+  }
+}
