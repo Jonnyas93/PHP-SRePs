@@ -19,10 +19,10 @@ namespace PHP_SRePS
             SQLiteConnection sqlite_conn;
             sqlite_conn = CreateConnection();
             AddSale(sqlite_conn, 1, 1, dateToDisplay, 1, 1);
-            //EditSale(sqlite_conn, testId, 3, 1, dateToDisplay.AddDays(1), 5, 2);
-            //DisplaySale(sqlite_conn, testId);
-            //Sale test = GetSale(sqlite_conn, testId);
-            //DeleteSale(sqlite_conn, testId);
+            EditSale(sqlite_conn, testId, 3, 1, dateToDisplay.AddDays(1), 5, 2);
+            DisplaySale(sqlite_conn, testId);
+            Sale test = GetSale(sqlite_conn, testId);
+            DeleteSale(sqlite_conn, testId);
             sqlite_conn.Close();
         }
 
