@@ -15,7 +15,7 @@ namespace PHP_SRePS
         static void Main(string[] args)
         {
             int testId = 24;
-            DateTime dateToDisplay = new DateTime(2009, 6, 1, 8, 42, 50);
+            DateTime dateToDisplay = new DateTime(2021, 5, 18, 8, 42, 50);
             SQLiteConnection sqlite_conn;
             sqlite_conn = CreateConnection();
             AddSale(sqlite_conn, 1, 1, dateToDisplay, 1, 1);
