@@ -22,37 +22,7 @@ namespace PHPSRePs
             }
             base.Dispose(disposing);
         }
-        static SQLiteConnection CreateConnection()
-        {
-
-            SQLiteConnection sqlite_conn;
-            // Create a new database connection:
-            sqlite_conn = new SQLiteConnection(@"Data Source=G:\Documents\Managing IT Project\Repo\PHP-SRePS\PHP-SRePS\PHP.db");
-            // Open the connection:
-            try
-            {
-                sqlite_conn.Open();
-            }
-            catch (Exception ex)
-            {
-
-            }
-            return sqlite_conn;
-        }
-        static void AddSale(SQLiteConnection conn, int productID, int userID, DateTime saleDate, int stock, int saleNumber)
-        {
-
-            SQLiteCommand sqlite_cmd;
-            sqlite_cmd = conn.CreateCommand();
-            string msg = "INSERT INTO Sales([product_id], [user_id], [datetime], [quantity], [sales_number]) VALUES(@productID, @userID, @saleDate, @stock, @saleNumber);";
-            sqlite_cmd.CommandText = msg;//"INSERT INTO tblActivity ([Activity_Category], [Activity_Category_Sub], [Activity_Start], [Activity_End], [Activity_Duration]) VALUES (@ActivityCategory, @ActivityCategorySub, @ActivityStart, @ActivityEnd, @ActivityDuration);";
-            sqlite_cmd.Parameters.Add(new SQLiteParameter("@productID", productID));
-            sqlite_cmd.Parameters.Add(new SQLiteParameter("@userID", userID));
-            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleDate", saleDate));
-            sqlite_cmd.Parameters.Add(new SQLiteParameter("@stock", stock));
-            sqlite_cmd.Parameters.Add(new SQLiteParameter("@saleNumber", saleNumber));
-            sqlite_cmd.ExecuteNonQuery();
-        }
+        
 
         #region Windows Form Designer generated code
 
@@ -62,29 +32,26 @@ namespace PHPSRePs
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.posItemsGridView = new MetroFramework.Controls.MetroGrid();
-            this.lblSubtotalText = new MetroFramework.Controls.MetroLabel();
-            this.lblTaxText = new MetroFramework.Controls.MetroLabel();
-            this.lblTotalText = new MetroFramework.Controls.MetroLabel();
-            this.lblPosTotal = new MetroFramework.Controls.MetroLabel();
-            this.lblPosSubtotal = new MetroFramework.Controls.MetroLabel();
-            this.lblPosTax = new MetroFramework.Controls.MetroLabel();
-            this.btnPosPay = new MetroFramework.Controls.MetroTile();
-            this.btnPosCancelSale = new MetroFramework.Controls.MetroButton();
-            this.btnPosRemoveItem = new MetroFramework.Controls.MetroButton();
             this.lblPosItemNo = new MetroFramework.Controls.MetroLabel();
             this.lblPosItemName = new MetroFramework.Controls.MetroLabel();
             this.umberOfItems = new MetroFramework.Controls.MetroLabel();
             this.txtPosItemNo = new System.Windows.Forms.TextBox();
-            this.txtPosItemName = new System.Windows.Forms.TextBox();
+            this.txtPosSaleNumber = new System.Windows.Forms.TextBox();
             this.txtPosNumberOfItems = new System.Windows.Forms.TextBox();
             this.btnPosItemAdd = new MetroFramework.Controls.MetroButton();
-            this.lblPosItemAddMessage = new MetroFramework.Controls.MetroLabel();
             this.btnPosSearchForAnItem = new MetroFramework.Controls.MetroTile();
             this.btnStaffPosLogout = new MetroFramework.Controls.MetroTile();
+            this.btnSearchSale = new MetroFramework.Controls.MetroTile();
+            this.btnDeleteSaleEl = new MetroFramework.Controls.MetroTile();
+            this.txtBxSaleID = new System.Windows.Forms.TextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.btnEditSale = new MetroFramework.Controls.MetroButton();
+            this.btnDeleteSale = new MetroFramework.Controls.MetroTile();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.posItemsGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,137 +62,42 @@ namespace PHPSRePs
             this.posItemsGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.posItemsGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.posItemsGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.posItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.posItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.posItemsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.posItemsGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.posItemsGridView.DefaultCellStyle = dataGridViewCellStyle14;
             this.posItemsGridView.EnableHeadersVisualStyles = false;
             this.posItemsGridView.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.posItemsGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.posItemsGridView.Location = new System.Drawing.Point(23, 74);
             this.posItemsGridView.Name = "posItemsGridView";
             this.posItemsGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.posItemsGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.posItemsGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.posItemsGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.posItemsGridView.RowTemplate.Height = 25;
             this.posItemsGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.posItemsGridView.Size = new System.Drawing.Size(706, 467);
             this.posItemsGridView.TabIndex = 0;
-            // 
-            // lblSubtotalText
-            // 
-            this.lblSubtotalText.AutoSize = true;
-            this.lblSubtotalText.Location = new System.Drawing.Point(47, 560);
-            this.lblSubtotalText.Name = "lblSubtotalText";
-            this.lblSubtotalText.Size = new System.Drawing.Size(76, 19);
-            this.lblSubtotalText.TabIndex = 1;
-            this.lblSubtotalText.Text = "Subtotal    :";
-            // 
-            // lblTaxText
-            // 
-            this.lblTaxText.AutoSize = true;
-            this.lblTaxText.Location = new System.Drawing.Point(47, 590);
-            this.lblTaxText.Name = "lblTaxText";
-            this.lblTaxText.Size = new System.Drawing.Size(46, 19);
-            this.lblTaxText.TabIndex = 2;
-            this.lblTaxText.Text = "Tax    :";
-            this.lblTaxText.Click += new System.EventHandler(this.metroLabel1_Click);
-            // 
-            // lblTotalText
-            // 
-            this.lblTotalText.AutoSize = true;
-            this.lblTotalText.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblTotalText.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblTotalText.Location = new System.Drawing.Point(47, 629);
-            this.lblTotalText.Name = "lblTotalText";
-            this.lblTotalText.Size = new System.Drawing.Size(69, 25);
-            this.lblTotalText.TabIndex = 3;
-            this.lblTotalText.Text = "Total  :";
-            // 
-            // lblPosTotal
-            // 
-            this.lblPosTotal.AutoSize = true;
-            this.lblPosTotal.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblPosTotal.FontWeight = MetroFramework.MetroLabelWeight.Bold;
-            this.lblPosTotal.Location = new System.Drawing.Point(207, 629);
-            this.lblPosTotal.Name = "lblPosTotal";
-            this.lblPosTotal.Size = new System.Drawing.Size(115, 25);
-            this.lblPosTotal.TabIndex = 4;
-            this.lblPosTotal.Text = "remove text";
-            // 
-            // lblPosSubtotal
-            // 
-            this.lblPosSubtotal.AutoSize = true;
-            this.lblPosSubtotal.Location = new System.Drawing.Point(207, 560);
-            this.lblPosSubtotal.Name = "lblPosSubtotal";
-            this.lblPosSubtotal.Size = new System.Drawing.Size(79, 19);
-            this.lblPosSubtotal.TabIndex = 5;
-            this.lblPosSubtotal.Text = "remove text";
-            // 
-            // lblPosTax
-            // 
-            this.lblPosTax.AutoSize = true;
-            this.lblPosTax.Location = new System.Drawing.Point(207, 590);
-            this.lblPosTax.Name = "lblPosTax";
-            this.lblPosTax.Size = new System.Drawing.Size(79, 19);
-            this.lblPosTax.TabIndex = 6;
-            this.lblPosTax.Text = "remove text";
-            // 
-            // btnPosPay
-            // 
-            this.btnPosPay.ActiveControl = null;
-            this.btnPosPay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPosPay.Font = new System.Drawing.Font("Cambria", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnPosPay.Location = new System.Drawing.Point(524, 629);
-            this.btnPosPay.Name = "btnPosPay";
-            this.btnPosPay.Size = new System.Drawing.Size(205, 68);
-            this.btnPosPay.TabIndex = 7;
-            this.btnPosPay.Text = "Pay";
-            this.btnPosPay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPosPay.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.btnPosPay.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
-            this.btnPosPay.TileTextFontWeight = MetroFramework.MetroTileTextWeight.Bold;
-            this.btnPosPay.UseCustomBackColor = true;
-            this.btnPosPay.UseSelectable = true;
-            this.btnPosPay.UseVisualStyleBackColor = false;
-            // 
-            // btnPosCancelSale
-            // 
-            this.btnPosCancelSale.Location = new System.Drawing.Point(524, 560);
-            this.btnPosCancelSale.Name = "btnPosCancelSale";
-            this.btnPosCancelSale.Size = new System.Drawing.Size(87, 49);
-            this.btnPosCancelSale.TabIndex = 8;
-            this.btnPosCancelSale.Text = "Cancel sale";
-            this.btnPosCancelSale.UseSelectable = true;
-            // 
-            // btnPosRemoveItem
-            // 
-            this.btnPosRemoveItem.Location = new System.Drawing.Point(629, 560);
-            this.btnPosRemoveItem.Name = "btnPosRemoveItem";
-            this.btnPosRemoveItem.Size = new System.Drawing.Size(100, 49);
-            this.btnPosRemoveItem.TabIndex = 9;
-            this.btnPosRemoveItem.Text = "Remove Item";
-            this.btnPosRemoveItem.UseSelectable = true;
             // 
             // lblPosItemNo
             // 
@@ -241,9 +113,10 @@ namespace PHPSRePs
             this.lblPosItemName.AutoSize = true;
             this.lblPosItemName.Location = new System.Drawing.Point(749, 182);
             this.lblPosItemName.Name = "lblPosItemName";
-            this.lblPosItemName.Size = new System.Drawing.Size(82, 19);
+            this.lblPosItemName.Size = new System.Drawing.Size(62, 19);
             this.lblPosItemName.TabIndex = 11;
-            this.lblPosItemName.Text = "Item Name :";
+            this.lblPosItemName.Text = "Sale No :";
+            this.lblPosItemName.Click += new System.EventHandler(this.lblPosItemName_Click);
             // 
             // umberOfItems
             // 
@@ -261,12 +134,12 @@ namespace PHPSRePs
             this.txtPosItemNo.Size = new System.Drawing.Size(228, 23);
             this.txtPosItemNo.TabIndex = 13;
             // 
-            // txtPosItemName
+            // txtPosSaleNumber
             // 
-            this.txtPosItemName.Location = new System.Drawing.Point(749, 216);
-            this.txtPosItemName.Name = "txtPosItemName";
-            this.txtPosItemName.Size = new System.Drawing.Size(228, 23);
-            this.txtPosItemName.TabIndex = 14;
+            this.txtPosSaleNumber.Location = new System.Drawing.Point(749, 216);
+            this.txtPosSaleNumber.Name = "txtPosSaleNumber";
+            this.txtPosSaleNumber.Size = new System.Drawing.Size(228, 23);
+            this.txtPosSaleNumber.TabIndex = 14;
             // 
             // txtPosNumberOfItems
             // 
@@ -277,26 +150,18 @@ namespace PHPSRePs
             // 
             // btnPosItemAdd
             // 
-            this.btnPosItemAdd.Location = new System.Drawing.Point(893, 380);
+            this.btnPosItemAdd.Location = new System.Drawing.Point(749, 402);
             this.btnPosItemAdd.Name = "btnPosItemAdd";
             this.btnPosItemAdd.Size = new System.Drawing.Size(75, 23);
             this.btnPosItemAdd.TabIndex = 16;
-            this.btnPosItemAdd.Text = "Add Item";
+            this.btnPosItemAdd.Text = "Add Sale";
             this.btnPosItemAdd.UseSelectable = true;
-            // 
-            // lblPosItemAddMessage
-            // 
-            this.lblPosItemAddMessage.AutoSize = true;
-            this.lblPosItemAddMessage.Location = new System.Drawing.Point(749, 424);
-            this.lblPosItemAddMessage.Name = "lblPosItemAddMessage";
-            this.lblPosItemAddMessage.Size = new System.Drawing.Size(80, 19);
-            this.lblPosItemAddMessage.TabIndex = 17;
-            this.lblPosItemAddMessage.Text = "remove Text";
+            this.btnPosItemAdd.Click += new System.EventHandler(this.btnPosItemAdd_Click);
             // 
             // btnPosSearchForAnItem
             // 
             this.btnPosSearchForAnItem.ActiveControl = null;
-            this.btnPosSearchForAnItem.Location = new System.Drawing.Point(733, 46);
+            this.btnPosSearchForAnItem.Location = new System.Drawing.Point(749, 445);
             this.btnPosSearchForAnItem.Name = "btnPosSearchForAnItem";
             this.btnPosSearchForAnItem.Size = new System.Drawing.Size(163, 48);
             this.btnPosSearchForAnItem.TabIndex = 18;
@@ -308,42 +173,117 @@ namespace PHPSRePs
             // btnStaffPosLogout
             // 
             this.btnStaffPosLogout.ActiveControl = null;
-            this.btnStaffPosLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnStaffPosLogout.BackColor = System.Drawing.Color.SkyBlue;
             this.btnStaffPosLogout.Location = new System.Drawing.Point(902, 46);
             this.btnStaffPosLogout.Name = "btnStaffPosLogout";
             this.btnStaffPosLogout.Size = new System.Drawing.Size(75, 48);
             this.btnStaffPosLogout.TabIndex = 19;
-            this.btnStaffPosLogout.Text = "Logout";
+            this.btnStaffPosLogout.Text = "Back";
             this.btnStaffPosLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStaffPosLogout.UseCustomBackColor = true;
             this.btnStaffPosLogout.UseSelectable = true;
             this.btnStaffPosLogout.UseVisualStyleBackColor = false;
             this.btnStaffPosLogout.Click += new System.EventHandler(this.btnStaffPosLogout_Click);
             // 
+            // btnSearchSale
+            // 
+            this.btnSearchSale.ActiveControl = null;
+            this.btnSearchSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSearchSale.Location = new System.Drawing.Point(749, 512);
+            this.btnSearchSale.Name = "btnSearchSale";
+            this.btnSearchSale.Size = new System.Drawing.Size(163, 48);
+            this.btnSearchSale.TabIndex = 20;
+            this.btnSearchSale.Text = "Search For a Sale ";
+            this.btnSearchSale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSearchSale.UseSelectable = true;
+            this.btnSearchSale.UseVisualStyleBackColor = false;
+            this.btnSearchSale.Click += new System.EventHandler(this.btnSearchSale_Click);
+            // 
+            // btnDeleteSaleEl
+            // 
+            this.btnDeleteSaleEl.ActiveControl = null;
+            this.btnDeleteSaleEl.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDeleteSaleEl.Location = new System.Drawing.Point(749, 577);
+            this.btnDeleteSaleEl.Name = "btnDeleteSaleEl";
+            this.btnDeleteSaleEl.Size = new System.Drawing.Size(163, 48);
+            this.btnDeleteSaleEl.TabIndex = 21;
+            this.btnDeleteSaleEl.Text = "Delete a Sale Element";
+            this.btnDeleteSaleEl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteSaleEl.UseCustomBackColor = true;
+            this.btnDeleteSaleEl.UseSelectable = true;
+            this.btnDeleteSaleEl.UseVisualStyleBackColor = false;
+            this.btnDeleteSaleEl.Click += new System.EventHandler(this.btnDeleteSaleEl_Click);
+            // 
+            // txtBxSaleID
+            // 
+            this.txtBxSaleID.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtBxSaleID.Location = new System.Drawing.Point(749, 363);
+            this.txtBxSaleID.Name = "txtBxSaleID";
+            this.txtBxSaleID.Size = new System.Drawing.Size(228, 23);
+            this.txtBxSaleID.TabIndex = 22;
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.Location = new System.Drawing.Point(0, 0);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(100, 23);
+            this.metroLabel3.TabIndex = 25;
+            // 
+            // btnEditSale
+            // 
+            this.btnEditSale.Location = new System.Drawing.Point(837, 402);
+            this.btnEditSale.Name = "btnEditSale";
+            this.btnEditSale.Size = new System.Drawing.Size(75, 23);
+            this.btnEditSale.TabIndex = 24;
+            this.btnEditSale.Text = "Edit Sale";
+            this.btnEditSale.UseSelectable = true;
+            // 
+            // btnDeleteSale
+            // 
+            this.btnDeleteSale.ActiveControl = null;
+            this.btnDeleteSale.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDeleteSale.Location = new System.Drawing.Point(749, 641);
+            this.btnDeleteSale.Name = "btnDeleteSale";
+            this.btnDeleteSale.Size = new System.Drawing.Size(163, 48);
+            this.btnDeleteSale.TabIndex = 22;
+            this.btnDeleteSale.Text = "Delete a Sale";
+            this.btnDeleteSale.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteSale.UseCustomBackColor = true;
+            this.btnDeleteSale.UseSelectable = true;
+            this.btnDeleteSale.UseVisualStyleBackColor = false;
+            this.btnDeleteSale.Click += new System.EventHandler(this.btnDeleteSale_Click);
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(749, 341);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(162, 19);
+            this.metroLabel4.TabIndex = 26;
+            this.metroLabel4.Text = "Sale Element ID (Sales_ID):";
+            this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
+            // 
             // staffPosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 700);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.btnDeleteSale);
+            this.Controls.Add(this.btnEditSale);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.txtBxSaleID);
+            this.Controls.Add(this.btnDeleteSaleEl);
+            this.Controls.Add(this.btnSearchSale);
             this.Controls.Add(this.btnStaffPosLogout);
             this.Controls.Add(this.btnPosSearchForAnItem);
-            this.Controls.Add(this.lblPosItemAddMessage);
             this.Controls.Add(this.btnPosItemAdd);
             this.Controls.Add(this.txtPosNumberOfItems);
-            this.Controls.Add(this.txtPosItemName);
+            this.Controls.Add(this.txtPosSaleNumber);
             this.Controls.Add(this.txtPosItemNo);
             this.Controls.Add(this.umberOfItems);
             this.Controls.Add(this.lblPosItemName);
             this.Controls.Add(this.lblPosItemNo);
-            this.Controls.Add(this.btnPosRemoveItem);
-            this.Controls.Add(this.btnPosCancelSale);
-            this.Controls.Add(this.btnPosPay);
-            this.Controls.Add(this.lblPosTax);
-            this.Controls.Add(this.lblPosSubtotal);
-            this.Controls.Add(this.lblPosTotal);
-            this.Controls.Add(this.lblTotalText);
-            this.Controls.Add(this.lblTaxText);
-            this.Controls.Add(this.lblSubtotalText);
             this.Controls.Add(this.posItemsGridView);
             this.Name = "staffPosForm";
             this.Text = "Make a Sale ";
@@ -357,28 +297,25 @@ namespace PHPSRePs
         #endregion
 
         private MetroFramework.Controls.MetroGrid posItemsGridView;
-        private MetroFramework.Controls.MetroLabel lblSubtotalText;
-        private MetroFramework.Controls.MetroLabel lblTaxText;
-        private MetroFramework.Controls.MetroLabel lblTotalText;
-        private MetroFramework.Controls.MetroLabel lblPosTotal;
-        private MetroFramework.Controls.MetroLabel lblPosSubtotal;
-        private MetroFramework.Controls.MetroLabel lblPosTax;
-        private MetroFramework.Controls.MetroTile btnPosPay;
-        private MetroFramework.Controls.MetroButton btnPosCancelSale;
-        private MetroFramework.Controls.MetroButton btnPosRemoveItem;
         private MetroFramework.Controls.MetroLabel lblPosItemNo;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.TextBox txtxPosItemNo;
-        private System.Windows.Forms.TextBox txtPosItemName;
+        private System.Windows.Forms.TextBox txtPosSaleNumber;
         private System.Windows.Forms.TextBox txtPosNumberOfItems;
         private MetroFramework.Controls.MetroButton btnPosItemAdd;
-        private MetroFramework.Controls.MetroLabel lblPosItemAddMessage;
         private MetroFramework.Controls.MetroTile btnPosSearchForAnItem;
         private MetroFramework.Controls.MetroTile btnStaffPosLogout;
         private MetroFramework.Controls.MetroLabel PosItemName;
         private System.Windows.Forms.TextBox txtPosItemNo;
         private MetroFramework.Controls.MetroLabel lblPosItemName;
         private MetroFramework.Controls.MetroLabel umberOfItems;
+        private MetroFramework.Controls.MetroTile btnSearchSale;
+        private MetroFramework.Controls.MetroTile btnDeleteSaleEl;
+        private System.Windows.Forms.TextBox txtBxSaleID;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroButton btnEditSale;
+        private MetroFramework.Controls.MetroTile btnDeleteSale;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
     }
 }

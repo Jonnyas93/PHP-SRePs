@@ -4,7 +4,7 @@
       "commandName": "Project",
       "environmentVariables": {
         "Key": "Value",
-        "connString": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\php.db"
+        "connString": "G:\\Documents\\Managing IT Project\\Repo\\Actual Project\\PHPSRePs\\PHPSRePs\\php.db"
       }
     }
   }

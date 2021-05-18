@@ -19,7 +19,7 @@ namespace PHP_SRePS
             SQLiteConnection sqlite_conn;
             sqlite_conn = CreateConnection();
             AddSale(sqlite_conn, 1, 1, dateToDisplay, 1, 1);
-            EditSale(sqlite_conn, testId, 3, 1, dateToDisplay.AddDays(1), 5, 2);
+            EditSale(sqlite_conn, testId, 3, 1, dateToDisplay, 5, 2);
             DisplaySale(sqlite_conn, testId);
             Sale test = GetSale(sqlite_conn, testId);
             DeleteSale(sqlite_conn, testId);
@@ -152,13 +152,12 @@ namespace PHP_SRePS
             sqlite_datareader = sqlite_cmd.ExecuteReader();
             while (sqlite_datareader.Read())
             {
-                var productIDv = sqlite_datareader.GetValue(1);
-                var userID = sqlite_datareader.GetValue(2);
-                var dateTime = sqlite_datareader.GetValue(3);
-                var stock = sqlite_datareader.GetValue(4);
-                int 
-                Product saleProduct = GetProduct(conn, productID);
-                Sale fetchedSale = new Sale(ID, (int)userID, saleProduct, (int)stock, (DateTime)dateTime);
+                var productID = sqlite_datareader["product_id"];
+                var userID = sqlite_datareader["user_id"];
+                DateTime dateTime = Convert.ToDateTime(sqlite_datareader["datetime"]);
+                var stock = sqlite_datareader["quantity"];
+                Product saleProduct = GetProduct(conn, Convert.ToInt32(productID));
+                Sale fetchedSale = new Sale(ID, Convert.ToInt32(userID), saleProduct, Convert.ToInt32(stock), dateTime);
                 return fetchedSale;
             }
             return null;
@@ -175,7 +174,7 @@ namespace PHP_SRePS
             {
                 var productName = sqlite_datareader.GetValue(1);
                 var price = sqlite_datareader.GetValue(2);
-                Product fetchedProduct = new Product(ID, (string)productName, (int)price);
+                Product fetchedProduct = new Product(ID, (string)productName, Convert.ToInt32(price));
                 return fetchedProduct;
             }
             return null;

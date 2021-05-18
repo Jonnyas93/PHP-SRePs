@@ -32,7 +32,7 @@ namespace PHPSRePs
         static SQLiteConnection CreateConnection()
         {
             SQLiteConnection sqlite_conn;
-            sqlite_conn = new SQLiteConnection("Data Source= G:/Documents/Managing IT Project/Repo/UI Project/PHPSRePs/PHPSRePs/PHP.db;" + " Version=3;");
+            sqlite_conn = new SQLiteConnection("Data Source= " + Environment.GetEnvironmentVariable("connString") + ";" + " Version=3;");
             try
             {
                 sqlite_conn.Open();

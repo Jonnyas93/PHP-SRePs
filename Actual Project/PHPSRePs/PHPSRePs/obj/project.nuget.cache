@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F89QTVbDYbVaL6T7dPv8RsLHx6cng+20Xl4MeTgrIcxl+TlR1gi+KcOH11CWRsQ9LKgGyRH8E/2sqGWqswn1JA==",
+  "dgSpecHash": "E4hh5tk3b+bhP7DlXIHipUOFGYw1lNC3c4ODLza5yTgcDs4HA7GTs5xMwhKNgAIKBKgz9/kDjuwf2ogsZsRoKA==",
   "success": true,
-  "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\UI Project\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
+  "projectFilePath": "G:\\Documents\\Managing IT Project\\Repo\\Actual Project\\PHPSRePs\\PHPSRePs\\PHPSRePs.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonathon\\.nuget\\packages\\csvhelper\\27.0.2\\csvhelper.27.0.2.nupkg.sha512",
     "C:\\Users\\Jonathon\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
