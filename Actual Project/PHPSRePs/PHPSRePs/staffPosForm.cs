@@ -120,9 +120,9 @@ namespace PHPSRePs
 
         private void btnStaffPosLogout_Click(object sender, EventArgs e)
         {
-            loginForm login = new loginForm();
+            AdminMenuForm adminForm = new AdminMenuForm();
             this.Hide();
-            login.Show();
+            adminForm.Show();
         }
 
         private void lblPosItemName_Click(object sender, EventArgs e)
